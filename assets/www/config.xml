@@ -7,7 +7,7 @@
 	<!-- Tool Set Version -->        
 	<preference name='phonegap-version' value='cli-5.2.0' />
 
-	<name>BitBox</name>
+	<name>Myanmar ABC Game</name>
 	<description>Play and learn ABC</description>
 	<author href="http://www.twittor.com/@myokoko" email="myokoko19@gmail.com">
         Myo Ko
