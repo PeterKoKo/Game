@@ -1,14 +1,11 @@
 * {margin:0;padding:0;box-sizing:border-box;}
-
-
 body {
   height:100%;
-  margin:0;
-  font-family:sans-serif;
-  border:5px solid #0D7F81;
-  border-color:-moz-linear-gradient(#0D7F81, #371E09);
-  border-color:-o-linear-gradient(#0D7F81, #371E09);
-  border-color:-webkit-linear-gradient(#0D7F81, #371E09);
+  font-size:25px;
+  padding-bottom:0px;
+  background-color:#0D7F81;
+ margin:0;font-family:sans-serif;
+ 
  }
  
  #ko {
@@ -19,7 +16,7 @@ body {
   background: -o-linear-gradient(#0D7F81, #371E09);
   background: -webkit-linear-gradient(#0D7F81, #371E09);
   border-radius: 15px 15px 15px 15px;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 
  }
  
@@ -30,21 +27,18 @@ border:0;margin:0;padding:0;
 a {
 text-decoration:none;
 color:#fff;
-
 }
-
-  .hide {display:none;}
-  .show {display:block;}
-  .border {border:solid 1px #0D7F81;}
+.hide {display:none;}
+.show {display:block;}
+.border {border:solid 1px #000;}
 
 .bgc {background-color:#e0e0e0;
-  color:#fff;
-  height:90px;
-  margin-top:5px;
-  margin-left:3px;
-  margin-right:3px;
-  padding-bottom:5px;
-  background: -moz-linear-gradient(#0D7F81, #371E09);
+color:#fff;
+margin-top:5px;
+margin-left:3px;
+margin-right:3px;
+padding-bottom:5px;
+background: -moz-linear-gradient(#0D7F81, #371E09);
   background: -o-linear-gradient(#0D7F81, #371E09);
   background: -webkit-linear-gradient(#0D7F81, #371E09);
   border-radius: 15px 15px 15px 15px;
@@ -53,135 +47,54 @@ color:#fff;
 }
 
 .contact {
-  width:60px;
-  height:35px;
   color:#ffffff;
   font-size: 15px;
-  font-style:bold;
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:13px;
-  margin-left:0px;
-  margin-right:0px;
-  padding-right:13px;
-  background-color:#4F674E;
-  background: -moz-linear-gradient(#0F0111, #F2F9F9);
-  background: -o-linear-gradient(#0F0111, #F2F9F9);
-  background: -webkit-linear-gradient(#0F0111, #F2F9F9);
-  border-radius: 12px 12px 12px 12px;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-  
-}
-
-.open {
-  width:60px;
-  height:35px;
-  color:#ffffff;
-  font-size: 15px;
-  font-style:bold;
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:13px;
-  margin-left:0px;
-  margin-right:0px;
-  padding-right:13px;
-  background-color:#4F674E;
-  background: -moz-linear-gradient(#0D7F81, #00E3FE);
-  background: -o-linear-gradient(#0D7F81, #00E3FE);
-  background: -webkit-linear-gradient(#0D7F81, #00E3FE);
-  border-radius: 15px 16px 15px 15px;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-
-}
-
-
-.info {
-  color:#ffffff;
-  text-align: center;
-  font-style: bold,;
-  font-size: 15px;
-  padding-top:5px;
-  padding-right:13px;
-  padding-left:13px;
-  padding-bottom:5px;
-  alignment-adjust:true;
-  position:absolute;
-  margin-left:15px;
-  background-color:#4F674E;
-  background: -moz-linear-gradient(#06ADDD, #371E09);
-  background: -o-linear-gradient(#06ADDD, #371E09);
-  background: -webkit-linear-gradient(#06ADDD, #371E09);
-  border-radius: 50px 50px 50px 50px;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 1px;
-}
-
-#myo {
-  color:#FFFDFA;
-  font-size: 18px;
-  font-style:bold;
-  text-shadow: 1px 1px 0px #11DEFC, 
-  2px 2px 0px #1C2DCE;
-  
   padding-top:5px;
   padding-bottom:5px;
   padding-left:15px;
   margin-left:20px;
   margin-right:20px;
   padding-right:15px;
-  
-  }
-
-
-.logo {
-
-  text-shadow: -1px -1px -1px #2D0907, 5px 5px 1px #000;
-  z-index:500;
-  opacity:0.85;
-  font-size:18px;
-  font-style:bold;
-  color:#ffffff;
-  font:monospace;
-  }
-
-
-#thing {
-  overflow:hidden;
-  overflow-x:hidden;
-  overflow-y:hidden;
-  height:100%;
-  width:100%;
-  right:5px;
-  left:5px;
-  color:#ffffff;
-  background-color:#1A4000;
-  border-radius:15px;
-  opacity:0.98;
+  background-color:#4F674E;
+  background: -moz-linear-gradient(#0D7F81, #371E09);
+  background: -o-linear-gradient(#0D7F81, #371E09);
+  background: -webkit-linear-gradient(#0D7F81, #371E09);
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 
 }
 
-#info1 {
-  overflow:hidden;
-  overflow-x:hidden;
-  overflow-y:hidden;
-  height:100%;
-  width:100%;
-  right:5px;
-  bottom:5px;
-  left:5px;
-  color:#ffffff;
-  background-color:#1A4000;
-  border-radius:15px;
-  opacity:0.9;
-  }
+.logo {
+  
+  text-shadow: 1px 1px #000;
+}
+
+#thing {
+overflow:hidden;
+overflow-x:hidden;
+overflow-y:hidden;
+height:100%;
+width:100%;
+right:5px;
+bottom:5px;
+left:5px;
+background: -moz-linear-gradient(#0D7F81, #371E09);
+  background: -o-linear-gradient(#0D7F81, #371E09);
+  background: -webkit-linear-gradient(#0D7F81, #371E09);
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+
+
+}
 
 body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	-webkit-backface-visibility: hidden;
 }
 .animated {
-	-webkit-animation-duration: 2s;
-	   -moz-animation-duration: 2s;
-	     -o-animation-duration: 2s;
-	        animation-duration: 2s;
+	-webkit-animation-duration: 5s;
+	   -moz-animation-duration: 5s;
+	     -o-animation-duration: 5s;
+	        animation-duration: 5s;
 	-webkit-animation-fill-mode: both;
 	   -moz-animation-fill-mode: both;
 	     -o-animation-fill-mode: both;
@@ -197,7 +110,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
   animation-iteration-count:infinite}
   
 
-  
+
 @-webkit-keyframes fadeInUpBig {
 	0% {
 		opacity: 0;
@@ -252,7 +165,3 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	-o-animation-name: fadeInUpBig;
 	animation-name: fadeInUpBig;
 }
-
-
-
-.
