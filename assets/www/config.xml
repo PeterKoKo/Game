@@ -27,8 +27,7 @@
 	<plugin name="cordova-plugin-device"         source="npm" spec="1.0.1" />
 	<plugin name="cordova-plugin-whitelist"      source="npm" spec="1.0.0" />
 	<plugin name="cordova-plugin-media-extended" source="npm" spec="2.2.11" />
-	<plugin name="com.admob.google" spec="4.0.8" source="pgb" />
-	<gap:plugin name="cordova-plugin-admobpro" source="pgb" />
+	<gap:plugin name="cordova-plugin-admob" source="npm" />
 
 	<!-- WHITELIST * WHITELIST * WHITELIST -->
 
