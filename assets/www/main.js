@@ -1,3 +1,6 @@
+
+
+
 var Main = function(game){
 
 };
@@ -15,11 +18,18 @@ var duck= false;
 var fire=false;
 var jump=false;
 
+
+
+
+	
+
 Main.prototype = {
 	
 	
 
 	create: function() {
+		
+	
 		
 	// setting the Camera view bound 
 	game.world.setBounds(0, 0, 1920, 1920);
@@ -302,6 +312,10 @@ Main.prototype = {
                 }
             }
         }
+		
+		
+		// preppare and load ad resource in background, e.g. at begining of game level
+
 			
 /*	 //  Reset the players velocity (movement)
      player.body.velocity.x = 0;
@@ -346,12 +360,14 @@ Main.prototype = {
     score += 10;
     scoreText.text = 'ရမွတ္: ' + score ;
 	
-/*	if (score == 100)
+	if (score == 200)
 	{
-		game.state.start('GameTitle');
+	
 		score = 0;
+		game.state.start('GameTitle');
+		if(AdMob) AdMob.showInterstitial();
 	}
-*/
+
 };
 
 

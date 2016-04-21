@@ -9,8 +9,17 @@ Preload.prototype = {
     game.load.image('ground', 'assets/images/platform.png');
     game.load.image('star', 'assets/images/star.png');
 	game.load.image('diamond',  'assets/images/diamond.png');
-	game.load.audio('music','1.mp3');
+	game.load.image('fireball','assets/images/fireball.png');
+	game.load.audio('myo','assets/bgm/Dangerous.mp3');
     game.load.spritesheet('dude', 'assets/images/dude.png', 50, 50);
+	
+	//gamepad buttons
+  	game.load.spritesheet('buttonvertical', 'assets/buttons/button-vertical.png',32,64);
+  	game.load.spritesheet('buttonhorizontal', 'assets/buttons/button-horizontal.png',64,32);
+   	game.load.spritesheet('buttondiagonal', 'assets/buttons/button-diagonal.png',48,48);
+  	game.load.spritesheet('buttonfire', 'assets/buttons/button-round-a.png',64,64);
+   	game.load.spritesheet('buttonjump', 'assets/buttons/button-round-b.png',64,64);
+                
     
 	},
 
