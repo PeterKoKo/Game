@@ -18,73 +18,53 @@ GameOver.prototype = {
 	
 	
   preload: function () {
-    this.optionCount = 1;
+    //this.optionCount = 1;
     this.creditCount = 0;
 
+
   },
 
-  addCredit: function(task, author) {
-    var authorStyle = { fontSize: '40px', fill: 'white', align: 'center', stroke: 'rgba(0,0,0,0)', srokeThickness: 4};
-    var taskStyle = { fontSize: '20px', fill: 'white', align: 'center', stroke: 'rgba(0,0,0,0)', srokeThickness: 4};
-    var authorText = game.add.text(game.world.centerX, 400, author, authorStyle);
-    var taskText = game.add.text(game.world.centerX, 450, task, taskStyle);
-    authorText.anchor.setTo(0.5);
-    authorText.stroke = "rgba(0,0,0,0)";
-    authorText.strokeThickness = 4;
-    taskText.anchor.setTo(0.5);
-    taskText.stroke = "rgba(0,0,0,0)";
-    taskText.strokeThickness = 4;
-    game.add.tween(authorText).to( { y: -300 }, 30000, Phaser.Easing.Cubic.Out, true, this.creditCount * 10000);
-    game.add.tween(taskText).to( { y: -200 }, 30000, Phaser.Easing.Cubic.Out, true, this.creditCount * 10000);
-    this.creditCount ++;
+  addCredit: function(author, task) {
+	var authorText = game.add.text(window.innerWidth/2, window.innerHeight + 50,author,{font: '16px Arial', fill: '#fff', align: 'center' , stroke: "#535353", strokeThickness: 7});//author, authorStyle);
+    var taskText = game.add.text(window.innerWidth/2, window.innerHeight + 100, task, {font: '16px Arial', fill: '#ff2', align: 'center' , stroke: "#535353", strokeThickness: 7});//author, authorStyle);
+     
+	 
+   	authorText.anchor.setTo(0.5);
+   	taskText.anchor.setTo(0.5);
+    game.add.tween(authorText).to( { y: game.world.height - window.innerHeight - 350 }, 30000, Phaser.Easing.Cubic.Out, true, this.creditCount * 3500);
+    game.add.tween(taskText).to( { y: game.world.height - window.innerHeight -300 }, 30000, Phaser.Easing.Cubic.Out, true, this.creditCount * 3500);
+    this.creditCount++;
   },
 
-  addMenuOption: function(text, callback) {
-    var optionStyle = { fontSize: '30px', fill: 'white', align: 'right', stroke: 'rgba(0,0,0,0)', srokeThickness: 4};
-    var txt = game.add.text(10, (this.optionCount * 80) + 50, text, optionStyle);
-
-    txt.stroke = "rgba(0,0,0,0";
-    txt.strokeThickness = 4;
-    var onOver = function (target) {
-      target.fill = "#FEFFD5";
-      target.stroke = "rgba(200,200,200,0.5)";
-      txt.useHandCursor = true;
-    };
-    var onOut = function (target) {
-      target.fill = "white";
-      target.stroke = "rgba(0,0,0,0)";
-      txt.useHandCursor = false;
-    };
-    txt.useHandCursor = true;
-    txt.inputEnabled = true;
-    txt.events.onInputUp.add(callback, this);
-    txt.events.onInputOver.add(onOver, this);
-    txt.events.onInputOut.add(onOut, this);
-
-    this.optionCount ++;
-  },
-
+ 
 
 	create: function(){
 		
-		
+		backToTitleBtn = game.add.button(100, window.innerHeight - 50, 'level_arrows', null, this, 0, 0, 0, 0);
+    	backToTitleBtn.anchor.setTo(0.5, 0.5);
+       	backToTitleBtn.fixedToCamera = true;
+       	backToTitleBtn.events.onInputUp.add(function(){game.state.start("GameTitle"); alpha = 0.8;});
+		backToTitleBtn.alpha = 1;
 		
 	this.stage.disableVisibilityChange = true;
    
-    var bg = game.add.sprite(0, 0, 'dude');
+    var bg = game.add.sprite(window.innerWidth / 2 - 200, window.innerHeight / 2, 'dude');
+	bg.anchor.setTo(0.5,0.5);
+	bg.scale.setTo(2.5,2.5);
+	bg.animations.add('walk', [0,1,2,3,4], 5, true);  // (key, framesarray, fps,repeat)
+	bg.animations.play('walk');
+	
     this.addCredit('MK GAME ZONE', 'Powered By');
     this.addCredit('ကိုမ်ိဳး', 'Developed By');
-    this.addCredit('Myanmar', 'PRODUCTION');
     this.addCredit('KO MYO', 'MUSIC');
+    this.addCredit('ထုတ္လုပ္သူ','မ်ိဳးကို');
     this.addCredit('', '');
-    this.addCredit('', '');
-    this.addMenuOption('BACK', function (e) {
-      game.state.start("GameTitle");
-    });
+    
     //game.add.tween(bg).to({alpha: 0}, 20000, Phaser.Easing.Cubic.Out, true, 1000);
   
 		
 	},
-
+	
+	
 	
 };
